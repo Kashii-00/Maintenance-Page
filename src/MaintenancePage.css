@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.maintenance-container {
+  position: fixed; /* Fix to the viewport */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  background-color: #fff; /* Background color */
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  color: #333;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 42px; /* Increase font size */
+  font-weight: bold;
+  margin-bottom: 40px;
+  animation: blink 2s infinite; /* Add blinking animation */
+}
+
+.description {
+  font-size: 18px; /* Increase font size */
+  margin-bottom: 30px;
+}
+
+.progress-bar {
+  width: 25%;
+  height: 10px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  margin: 20px auto;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.progress {
+  width: 60%;
+  height: 100%;
+  background: #007bff;
+  animation: progressAnimation 5s infinite; /* Slower animation */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.report-issue,
+.contact-support {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.report-issue {
+  background: #f8f9fa;
+  color: #333;
+  border: 0.5px solid #ccc;
+
+}
+
+.contact-support {
+  background: #007bff;
+  color: #fff;
+}
+
+.footer-text {
+  font-size: 16px; /* Increase font size */
+  color: #666;
+  margin-top: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 40;
+  }
+  to {
+    opacity: 10;
+  }
+}
+
+@keyframes progressAnimation {
+  0% {
+    width: 10%; /* Near start */
+  }
+  50% {
+    width: 90%; /* Near end */
+  }
+  100% {
+    width: 10%; /* Back to near start */
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    color: black;
+  }
+  50% {
+    color: gray;
+  }
+}
